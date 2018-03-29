@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="54t-vs-vTv">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--AR Search-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ARSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UDY-nd-eL1">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </arscnView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zBg-6p-nx9">
+                                <rect key="frame" x="9" y="76" width="294" height="30"/>
+                                <color key="backgroundColor" red="0.70019021085930244" green="0.80529857775707214" blue="1" alpha="0.32146297089041098" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="294" id="Qg9-Ib-EpO"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwQ-bH-08c">
+                                <rect key="frame" x="317" y="76" width="48" height="30"/>
+                                <color key="backgroundColor" red="0.51572959865349088" green="0.74773422038831217" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Search">
+                                    <color key="titleColor" red="0.99941259502628255" green="1" blue="0.97173739181597918" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchBTN:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ViF-TI-eaY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uwQ-bH-08c" secondAttribute="trailing" constant="10" id="DXZ-b6-VR4"/>
+                            <constraint firstItem="UDY-nd-eL1" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="EgP-DG-cnX"/>
+                            <constraint firstItem="UDY-nd-eL1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="KFY-i2-Dvg"/>
+                            <constraint firstItem="UDY-nd-eL1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ouf-na-six"/>
+                            <constraint firstItem="zBg-6p-nx9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="9" id="ezp-zy-9WO"/>
+                            <constraint firstItem="uwQ-bH-08c" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="htx-oT-H39"/>
+                            <constraint firstItem="UDY-nd-eL1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pHh-o6-MZb"/>
+                            <constraint firstItem="zBg-6p-nx9" firstAttribute="top" secondItem="uwQ-bH-08c" secondAttribute="top" id="ynG-dC-gCC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="AR Search" largeTitleDisplayMode="always" id="2RJ-aM-G2W"/>
+                    <connections>
+                        <outlet property="addBTN" destination="uwQ-bH-08c" id="Gnc-p8-UYa"/>
+                        <outlet property="arView" destination="UDY-nd-eL1" id="zhp-PF-f3b"/>
+                        <outlet property="input" destination="zBg-6p-nx9" id="Ph3-LV-LUv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="456.80000000000001" y="117.39130434782609"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GOf-BM-BFR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="54t-vs-vTv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kNp-ap-vLt">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.44303167504372132" green="0.43607184954675415" blue="0.69557027284263961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="IC2-dp-BPm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QD5-Hu-IhB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-524" y="117"/>
+        </scene>
+    </scenes>
+</document>
