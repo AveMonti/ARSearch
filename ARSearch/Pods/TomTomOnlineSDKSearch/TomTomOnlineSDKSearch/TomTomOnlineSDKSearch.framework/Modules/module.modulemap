@@ -1,0 +1,6 @@
+framework module TomTomOnlineSDKSearch {
+  umbrella header "TomTomOnlineSDKSearch.h"
+
+  export *
+  module * { export * }
+}

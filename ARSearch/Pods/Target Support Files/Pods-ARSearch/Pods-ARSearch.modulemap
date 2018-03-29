@@ -1,0 +1,6 @@
+framework module Pods_ARSearch {
+  umbrella header "Pods-ARSearch-umbrella.h"
+
+  export *
+  module * { export * }
+}
